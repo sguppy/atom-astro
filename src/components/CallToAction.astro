@@ -2,28 +2,35 @@
 import Container from "./Container.astro"
 import Frame from "./Frame.astro"
 import { cn } from "@lib/utils"
-import {button} from "@tailus/themer-button"
 ---
 
 <div class="relative">
   <div
         aria-hidden
-        class="opacity-0 dark:opacity-35 absolute [background-image:radial-gradient(theme(colors.gray.500),transparent_50%)] top-0 w-[1000px] z-10 h-[800px] left-1/2 -translate-x-1/2 -translate-y-1/3 pointer-events-none"
+        class="opacity-0 dark:opacity-35 absolute [background-image:radial-gradient(theme(colors.indigo.500),transparent_50%)] top-0 w-[1000px] z-10 h-[800px] left-1/2 -translate-x-1/2 -translate-y-1/3 pointer-events-none"
       />
   <Container>
     <div class="relative">
       <div class="mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12">
-        <h2 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">Get Started now</h2>
+        <h2 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">Ready for better sleep?</h2>
         <p class="text-center text-lg text-gray-600 dark:text-gray-300">
-          Be part of millions people around the world using tailus in modern UIS.
+          Join thousands who've transformed their sleep with Lulla's science-backed CBT-I program.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <Frame>
-                      <a href="https://beta.tailus.io/demo" class={cn(button.primary.lg, "relative z-[1]")}>
-                        Start Building
-                      </a>
-                    </Frame>
-                </div>
+            <Frame>
+              <a href="/start-trial" class="relative z-[1] inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                Start Now
+              </a>
+            </Frame>
+            <Frame>
+              <a href="/demo" class="relative z-[1] inline-flex items-center justify-center px-6 py-3 text-base font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                Watch Demo
+              </a>
+            </Frame>
+        </div>
+        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+          Get your Free Sleep Assessment and see how Lulla can help you sleep better.
+        </p>
       </div>
     </div>
   </Container>
